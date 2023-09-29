@@ -1,10 +1,9 @@
-import { AddTodo } from "./components/AddTodo";
-import { TodoList } from "./components/TodoList";
-import { store } from "./store";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { App } from "./App.tsx";
 
-export function App() {
-  return (
-    <ReduxProvider store={store}>
-      <TodoList />
-      <AddTodo />
-    </ReduxProvider>
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

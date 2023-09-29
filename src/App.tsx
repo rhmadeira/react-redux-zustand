@@ -1,5 +1,14 @@
-function App() {
-  return <p>Hello world!</p>;
-}
+import { Provider as ReduxProvider } from "react-redux";
 
-export default App;
+import { AddTodo } from "./components/AddTodo";
+import { TodoList } from "./components/TodoList";
+import { store } from "./store";
+
+export function App() {
+  return (
+    <ReduxProvider store={store}>
+      <TodoList />
+      <AddTodo />
+    </ReduxProvider>
+  );
+}
