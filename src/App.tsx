@@ -1,14 +1,15 @@
 import { Provider as ReduxProvider } from "react-redux";
+import "./styles/global.css";
 
-import { AddTodo } from "./components/AddTodo";
-import { TodoList } from "./components/TodoList";
 import { store } from "./store";
+import Player from "./page/Player";
 
 export function App() {
   return (
     <ReduxProvider store={store}>
-      <TodoList />
-      <AddTodo />
+      <Player />
+      {/* <TodoList />
+      <AddTodo /> */}
     </ReduxProvider>
   );
 }
